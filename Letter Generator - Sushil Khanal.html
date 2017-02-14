@@ -1,0 +1,35 @@
+<html>
+ <title>
+    Letter Generator
+ </title>
+  <body>
+   <h1>
+    Letter Generator
+   </h1>
+    <p>
+Date:
+     <input type="text" id="dateBox" size=30 value="February 29, 2017"><p></p>
+Reciever:
+     <input type="text" id="recieverBox" size=30 value="Buddy"><p></p>
+Subject:
+     <input type="text" id="subjectBox" size=30 value="My birthday invitation"><p></p>
+Body part 1:
+     <input type="text" id="body1Box" size=135 value="Have you heard about my birthday, which is coming up on Feb 29, 2017? It would mean a lot for me if you could make it to my birthday"><p></p>
+Body part 2:
+     <input type="text" id="body2Box" size=40 value="Hopefully, I'll see you on Feb 29, 2017"><p></p>
+Sender:
+     <input type="text" id="senderBox" size=30 value="Sushil">
+    <hr>
+	 <input type="button" value="Generate Letter"
+            onclick="document.getElementById('outputDiv').innerHTML=
+	 		'<p>Date: ' + document.getElementById('dateBox').value + '</p>' +
+            '<p>Dear ' + document.getElementById('recieverBox').value + ',</p>' +    			 
+            '<p>Subject: ' + document.getElementById('subjectBox').value + '</p>' +
+            document.getElementById('body1Box').value + '.<br>' +
+            document.getElementById('body2Box').value + '.</p>' +
+            '<p> Thanks, <br> ' + document.getElementById('senderBox').value + '.</p>';">
+    <hr>
+    <div id="outputDiv">
+    </div>
+</body>
+</html>
