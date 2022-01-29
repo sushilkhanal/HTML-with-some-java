@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html>
+<head>
+	<title> Mini Calculator </title>
+</head>
+<body>
+	<h1> Mini Calculator </h1>
+	<form id="calculator">
+		<p>
+			<table>
+				<tr><td>Enter first number: </td><td><input type="text" id="firstBox" value=""></td></tr>
+				<tr><td>Enter second number: </td><td><input type="text" id="secondBox" value=""></td></tr>
+				<tr><td>Output: </td><td><input type="text" id="outputDiv" value=""></td></tr>
+			</table>
+		</p>
+		<input type="button" onclick="sum()" value="add">
+
+		<input type="button" onclick="max2()" value="Max">
+
+		<input type="button" onclick="min3()" value="Min">
+
+	</form>
+
+	<script type="text/javascript">
+		
+		function sum(){
+			var myNumber1 = parseFloat(document.getElementById('firstBox').value);
+			var myNumber2 = parseFloat(document.getElementById('secondBox').value);
+			var add = myNumber1 + myNumber2;
+			document.getElementById('outputDiv').value = add;
+
+		}
+
+		function max2(){
+			var myNumber1 = parseFloat(document.getElementById('firstBox').value);
+			var myNumber2 = parseFloat(document.getElementById('secondBox').value);
+			var max = Math.max(myNumber1,myNumber2);
+			document.getElementById('outputDiv').value = max;
+			
+		}
+
+		function min3(){
+			var myNumber1 = parseFloat(document.getElementById('firstBox').value);
+			var myNumber2 = parseFloat(document.getElementById('secondBox').value);
+			var min = Math.min(myNumber1,myNumber2);
+			document.getElementById('outputDiv').value = min;
+			
+		}
+	</script>
+
+	<input type="button" value="clear" onclick="document.getElementById('calculator').reset()">
+</body>
+</html>
