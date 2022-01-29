@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<script src="calculate.js" type="text/javascript"></script>
+
+<div style=" border-style: ridge; margin: 200px; margin-bottom: 20px">
+
+
+	<head style="border-style: ridge;">
+
+		<p style="border-width:1px; border-style:solid; margin-left: 20px; margin-right: 60px">
+			Programming Assignment #5
+		</p>
+
+	</head>
+
+<body>
+
+	<form name=form1  style="background-color:#72b5d8; border-style: solid; margin-left: 20px; margin-right: 20px">
+       
+       <p><b>Square Root Calculation</b></p>
+
+
+		Enter Number:
+
+		<input type="text" name="input" size=18></input>
+
+		<br>
+		<br>
+
+		Square root:
+
+		<input type="text" name="answer" size=20></input>
+
+		<br>
+		<br>
+         
+        <div style="text-align: center;">
+ 		  <input type="button" value="Calculate" onClick='doMath()'></input>
+        </div>
+	</form>
+
+</body>
+
+
+</div>
+
+</html>
+
+function doMath(){
+
+	var inputNum=document.form1.input.value;
+	var result = Math.sqrt(inputNum);
+	document.form1.answer.value = result;
+
+}
