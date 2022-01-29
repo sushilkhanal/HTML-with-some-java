@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+     <title> Old MacDonald Verse </title>
+
+     <script type="text/javascript">
+
+          function OldMacVerse(animal, sound)
+     // Assumes: animal is the name of an animal, sound is the sound it makes 
+     // Results: displays a verse of the song "Old MacDonald Had a Farm"in outputDiv
+     {
+
+          document.getElementById('outputDiv').innerHTML = '<p> Old MacDonald had a farm, E-I-E-I-O.<br />'
+          + 'And on that farm he had a ' + animal +
+          ' E-I-E-I-O.<br>' +
+          'With a ' + sound + "-" + sound + 
+          ' here, and a ' + sound + "-" + sound + ' there,<br>' +
+          'here a ' + sound + ', there a ' + sound + ', everywhere a ' + sound + '-' + sound + '.<br>' +
+          'Old MacDonald had a farm, E-I-E-I-O.</p>';
+     }
+
+
+     function play(){
+          var sound = document.getElementById("audio");
+          OldMacVerse("pig", "oink");
+          sound.play();
+
+     }
+     function play1(){
+          var sound = document.getElementById("audio1");
+          OldMacVerse("sheep", "baa");
+          sound.play();
+
+     }
+     function play2(){
+          var sound = document.getElementById("audio2");
+          OldMacVerse("cow", "moo");
+          sound.play();
+
+     }
+
+
+ </script>  
+
+</head>
+
+<body>
+
+     <input type="button" value="pig"  onclick="play()"> </input>          
+     <audio id="audio" src="https://www.google.com/logos/fnbx/animal_sounds/pig.mp3" ></audio>
+
+     <input type="button" value="sheep"  onclick="play1()"> </input>            
+     <audio id="audio1" src="https://upload.wikimedia.org/wikipedia/commons/1/13/Sheep_bleating.ogg" ></audio>
+
+     <input type="button" value="cow"  onclick="play2()"> </input>              
+     <audio id="audio2" src="https://www.google.com/logos/fnbx/animal_sounds/cow.mp3" ></audio>
+
+
+     <div id ="outputDiv" style="border-style: inset; width: 400px;"></div>
+
+</body>
+
+</html>
